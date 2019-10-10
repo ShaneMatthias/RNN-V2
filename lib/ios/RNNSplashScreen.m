@@ -72,10 +72,12 @@
 	}
 	
 	if (viewController != nil) {
-		id<UIApplicationDelegate> appDelegate = [UIApplication sharedApplication].delegate;
-		appDelegate.window.rootViewController = viewController;
-		[appDelegate.window makeKeyAndVisible];
+		viewController = [[RNNSplashScreen alloc] init];
 	}
+
+	id<UIApplicationDelegate> appDelegate = [UIApplication sharedApplication].delegate;
+	appDelegate.window.rootViewController = viewController;
+	[appDelegate.window makeKeyAndVisible];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
