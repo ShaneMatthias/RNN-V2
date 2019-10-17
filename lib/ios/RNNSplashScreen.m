@@ -65,13 +65,10 @@
 			image = [UIImage imageNamed:imageName];
 		}
 		
-		if (image != nil) {
-			viewController = [[RNNSplashScreen alloc] init];
-			viewController.view = [[UIImageView alloc] initWithImage:image];
-		}
+		viewController = [[RNNSplashScreen alloc] init];
+		viewController.view = [[UIImageView alloc] initWithImage:image];
 	}
 
-	viewController = [[RNNSplashScreen alloc] init];
 	id<UIApplicationDelegate> appDelegate = [UIApplication sharedApplication].delegate;
 	appDelegate.window.rootViewController = viewController;
 	[appDelegate.window makeKeyAndVisible];
