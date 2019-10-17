@@ -70,11 +70,8 @@
 			viewController.view = [[UIImageView alloc] initWithImage:image];
 		}
 	}
-	
-	if (viewController != nil) {
-		viewController = [[RNNSplashScreen alloc] init];
-	}
 
+	viewController = [[RNNSplashScreen alloc] init];
 	id<UIApplicationDelegate> appDelegate = [UIApplication sharedApplication].delegate;
 	appDelegate.window.rootViewController = viewController;
 	[appDelegate.window makeKeyAndVisible];
